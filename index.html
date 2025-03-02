@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest-Grossing Movies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Top Grossing Movies</h1>
+        
+        <div class="filters">
+            <input type="text" id="search" placeholder="Search by title...">
+            
+            <select id="directorFilter">
+                <option value="">All Directors</option>
+            </select>
+
+            <div class="filter-group">
+                <label>Release Year Range</label>
+                <div class="year-inputs">
+                    <input type="number" id="minYear" placeholder="From">
+                    <span class="filter-separator">–</span>
+                    <input type="number" id="maxYear" placeholder="To">
+                </div>
+            </div>
+
+            <button onclick="resetFilters()">Reset Filters</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="static-header">№</th>
+                    <th class="static-header">Rank</th>
+                    <th onclick="sortTable('title')">Title <span class="sort-indicator"></span></th>
+                    <th onclick="sortTable('director')">Director(s) <span class="sort-indicator"></span></th>
+                    <th onclick="sortTable('release_year')">Year <span class="sort-indicator"></span></th>
+                    <th onclick="sortTable('box_office')">Box Office <span class="sort-indicator"></span></th>
+                </tr>
+            </thead>
+            <tbody id="movieTable">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        
+    </script>
+</body>
+</html>
